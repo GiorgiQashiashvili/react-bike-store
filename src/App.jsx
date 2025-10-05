@@ -2,8 +2,31 @@ import user from "./assets/default-avatar-icon-of-social-media-user-vector.jpg"
 import { CiSearch } from "react-icons/ci";
 import { RiShoppingCartFill } from "react-icons/ri";
 import bicycle from "./assets/JMO_0208.webp"
+import { useEffect, useState } from "react";
+import { MdNavigateNext } from "react-icons/md";
+import { GrFormPrevious } from "react-icons/gr";
+import LogIn from "./components/LogIn";
+
 
 function App() {
+  const images = [
+    "https://www.bike-discount.de/media/image/05/38/cd/Focus-Sam-1534k9Bsy3aLcp_800x800@2x.jpg",
+    "https://www.bike-discount.de/media/image/a4/b7/16/Focus-Sam-2mAJYiN47kwUCk_800x800@2x.jpg",
+    "https://www.bike-discount.de/media/image/40/4b/bb/Focus-Sam-3ubX8yyicPMt8n_800x800@2x.jpg",
+    "https://www.bike-discount.de/media/image/12/45/2e/Focus-Sam-4I9RcIUCmOEwyR_800x800@2x.jpg"
+  ]
+
+  const [currentIndex, setCurrentIndex] = useState(0)
+
+  const prevSlide = () => {
+    setCurrentIndex((prev) =>
+      prev === 0 ? images.length - 1 : prev - 1
+    )
+  }
+
+  const nextSlide = () => {
+    setCurrentIndex((prev) => (prev + 1) % images.length)
+  }
 
   return (
     <div className="main">
@@ -36,14 +59,14 @@ function App() {
             <RiShoppingCartFill />
           </button>
 
-          <a href="#">wheels</a>
-          <a href="#">bicycles</a>
+          <a href="#">Wheels</a>
+          <a href="#">Bicycles</a>
 
           <div className="account">
 
             <img src={user} alt="" />
 
-            <button>user</button>
+            <LogIn />
 
           </div>
 
@@ -55,11 +78,18 @@ function App() {
 
         <div className="content">
 
+          <button className="next" onClick={prevSlide}><GrFormPrevious />
+          </button>
+
           <div className="photo">
 
-            <img src={bicycle} alt="" />
+            <img src={images[currentIndex]} alt="" />
 
           </div>
+
+          <button className="next" onClick={nextSlide}><MdNavigateNext />
+          </button>
+
 
           <div className="description">
 

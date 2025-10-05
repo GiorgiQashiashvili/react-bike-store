@@ -85,19 +85,6 @@ a:hover {
   gap: 20px;
 }
 
-.account button {
-  border: none;
-  background-color: white;
-  height: 40px;
-  width: 60px;
-  font-size: 16px;
-}
-
-.account button:hover{
-  background-color: red;
-  transition: all 0.5s;
-}
-
 .account img {
   width: 40px;
   border-radius: 50px;
@@ -107,10 +94,11 @@ a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100vh;
 }
 
 .photo img{
-  width: 600px;
+  width: 560px;
 }
 
 .content{
@@ -136,5 +124,46 @@ a:hover {
 .description button:hover{
   background-color: red;
   border: 1px solid black;
+  transition: all 0.5s;
+}
+
+.next{
+  width: 30px;
+  height: 30px;
+  border: 1px solid #ccc;
+  background-color: #ccc;
+  border-radius: 50px;
+}
+
+.login-container{
+position: absolute;
+display: flex;
+flex-direction: column;
+background-color: #ccc;
+border-radius: 11px;
+}
+
+.registration{
+border: none;
+  font-size: 16px;
+  color: white;
+  height: 40px;
+}
+
+.registration:hover{
+  background-color: #ccc;
+  transition: all 0.5s;
+}
+
+.account-btn{
+  width: 80px;
+  background-color: white;
+  border: none;
+  font-size: 16px;
+  height: 40px;
+}
+
+.account-btn:hover{
+  background-color: red;
   transition: all 0.5s;
 }
