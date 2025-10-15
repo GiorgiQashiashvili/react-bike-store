@@ -19,8 +19,8 @@ function LogIn() {
             {login && (
                 <div className="login-container">
 
-                    <Link to="/signup" className="registration">Sign Up</Link>
-                    <Link to="/login" className="registration">Log in</Link>
+                    <Link to="signup" className="registration">Sign Up</Link>
+                    <Link to="login" className="registration">Log in</Link>
 
                 </div>
             )}
