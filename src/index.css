@@ -20,6 +20,10 @@ button {
   gap: 20px;
 }
 
+.links {
+  display: flex;
+}
+
 .cart {
   display: flex;
   justify-content: center;
@@ -88,46 +92,47 @@ a:hover {
 .account img {
   width: 40px;
   border-radius: 50px;
+  cursor: pointer;
 }
 
-.center{
+.center {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
 }
 
-.photo img{
+.photo img {
   width: 560px;
 }
 
-.content{
+.content {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 20px;
 }
 
-.description{
+.description {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.description button{
+.description button {
   width: 125px;
   height: 40px;
   background-color: white;
   border: 1px solid #ccc;
 }
 
-.description button:hover{
+.description button:hover {
   background-color: red;
   border: 1px solid black;
   transition: all 0.5s;
 }
 
-.next{
+.next {
   width: 30px;
   height: 30px;
   border: 1px solid #ccc;
@@ -135,27 +140,30 @@ a:hover {
   border-radius: 50px;
 }
 
-.login-container{
-position: absolute;
-display: flex;
-flex-direction: column;
-background-color: #ccc;
-border-radius: 11px;
+.login-container {
+  position: absolute;
+  right: 80px;
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  color: red;
+  border-radius: 11px;
 }
 
-.registration{
-border: none;
+.registration {
+  border: none;
   font-size: 16px;
   color: white;
   height: 40px;
 }
 
-.registration:hover{
-  background-color: #ccc;
+.registration:hover {
   transition: all 0.5s;
+  background: transparent;
+  color: red;
 }
 
-.account-btn{
+.account-btn {
   width: 80px;
   background-color: white;
   border: none;
@@ -163,7 +171,183 @@ border: none;
   height: 40px;
 }
 
-.account-btn:hover{
+.account-btn:hover {
   background-color: red;
   transition: all 0.5s;
+}
+
+.login-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 20px;
+}
+
+.login-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: black;
+  padding: 50px;
+  border-radius: 10px;
+  color: red;
+  width: 400px;
+  gap: 20px;
+}
+
+.login-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.login-inputs p{
+  margin-bottom: 10px;
+}
+
+.input {
+  background: transparent;
+  padding: 10px;
+  outline: none;
+  border: 1px solid white;
+  width: 300px;
+  color: white;
+  border-radius: 8px;;
+}
+
+a {
+  cursor: pointer;
+}
+
+.forgot a {
+  color: red;
+}
+
+.forgot a:hover {
+  background: transparent;
+  color: white;
+}
+
+.signup-link {
+  display: flex;
+  align-items: center;
+}
+
+.signup-link a {
+  color: white;
+}
+
+.signup-link a:hover {
+  background: transparent;
+  color: red;
+}
+
+.login-btn {
+  background-color: red;
+  width: 200px;
+  color: white;
+  border-radius: 8px;
+}
+
+.login-btn-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+@media(max-width:640px) {
+  .left-header {
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    visibility: hidden;
+  }
+
+  .center-header input {
+    width: 150px;
+    position: relative;
+  }
+
+  .search {
+    position: absolute;
+    margin-left: 115px;
+  }
+
+  .search button {
+    border: none;
+    background: transparent;
+  }
+
+  .right-header {
+    display: flex;
+    gap: 0px;
+  }
+
+  .links {
+    font-size: 10px;
+    display: flex;
+    gap: 0px;
+  }
+
+  .right-header {
+    display: flex;
+    align-items: center;
+  }
+
+  .login button {
+    font-size: 14px;
+  }
+
+  .login-container {
+    position: absolute;
+    display: flex;
+    width: 65px;
+    right: 5px;
+  }
+
+  .login-container a {
+    font-size: 12px;
+  }
+
+  .account img {
+    width: 30px;
+  }
+
+  .account {
+    display: flex;
+    gap: 10px;
+  }
+
+  .photo img {
+    width: 250px;
+    position: relative;
+    margin-bottom: 400px;
+  }
+
+  .description {
+    font-size: 13px;
+    position: absolute;
+    margin-top: 500px;
+    margin-left: 15px;
+  }
+
+  .login-div {
+    width: 350px;
+  }
+
+  .input {
+    background: transparent;
+    padding: 10px;
+    outline: none;
+    width: 250px;
+    color: white;
+    border-radius: 8px;
+  }
+.signup-link{
+  font-size: 15px;
+}
 }

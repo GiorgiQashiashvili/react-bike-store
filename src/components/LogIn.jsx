@@ -1,4 +1,7 @@
 import { useState } from "react"
+import user from "../assets/default-avatar-icon-of-social-media-user-vector.jpg"
+import { Link } from "react-router"
+
 
 function LogIn() {
     const [login, setLogin] = useState(false)
@@ -11,13 +14,13 @@ function LogIn() {
 
         <div className="login">
 
-            <button className="account-btn" onClick={toggleLogin}>Log in</button>
+            <img onClick={toggleLogin} src={user} alt="" />
 
             {login && (
                 <div className="login-container">
 
-                    <a href=""  className="registration">Registration</a>
-                    <a href="" className="registration">Log in</a>
+                    <Link to="/signup" className="registration">Sign Up</Link>
+                    <Link to="/login" className="registration">Log in</Link>
 
                 </div>
             )}
