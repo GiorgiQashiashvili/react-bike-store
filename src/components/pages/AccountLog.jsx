@@ -27,7 +27,7 @@ function AccountLog() {
                 </div>
                 <div className="signup-link">
                     <p>Don't have an account?</p>
-                    <a href="/signup">Signup</a>
+                    <Link to="/signup">Signup</Link>
                 </div>
                 </div>
             </div>

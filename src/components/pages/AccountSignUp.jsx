@@ -28,7 +28,7 @@ function AccountSignUP() {
                     </div>
                     <div className="signup-link">
                         <p>Already have an account?</p>
-                        <a href="/login">Login</a>
+                        <Link to="/login">Login</Link>
                     </div>
                 </div>
             </div>
