@@ -1,6 +1,6 @@
 import { useState } from "react"
 import user from "../assets/default-avatar-icon-of-social-media-user-vector.jpg"
-import { Link } from "react-router"
+import { Link } from "react-router-dom"
 
 
 function LogIn() {
