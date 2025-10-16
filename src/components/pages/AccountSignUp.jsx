@@ -1,7 +1,11 @@
 import { Link } from "react-router-dom"
 import Input from "../inputs/Input"
+import { useState } from "react"
+import PasswordInput from "../inputs/PasswordInput"
 
 function AccountSignUP() {
+    const [showPassword, setShowPassword] = useState(false)
+
     return (
         <div className="login-main">
             <div className="login-div">
@@ -15,11 +19,19 @@ function AccountSignUP() {
                     </div>
                     <div>
                         <p>Create password</p>
-                        <Input />
+                        <PasswordInput showPassword={showPassword}/>
                     </div>
                     <div>
                         <p>Confirm password</p>
-                        <Input />
+                        <PasswordInput showPassword={showPassword}/>
+                    </div>
+                    <div className="see-password">
+                        <input
+                            type="checkbox"
+                            checked={showPassword}
+                            onChange={() => setShowPassword(!showPassword)}
+                        />
+                        <p>Show password</p>
                     </div>
                 </div>
                 <div className="login-btn-links">

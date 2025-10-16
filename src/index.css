@@ -258,6 +258,20 @@ a {
   gap: 20px;
 }
 
+.see-password{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.see-password input{
+  cursor: pointer;
+}
+
+.see-password p{
+  margin-top: 10px;
+}
+
 @media(max-width:640px) {
   .left-header {
     font-size: 10px;
